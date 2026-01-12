@@ -90,13 +90,13 @@ export default function Home() {
         <section className="w-full border-b py-12 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              <Link href="/dispensaries" className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-center text-center">
                 <UsersIcon className="h-10 w-10 text-primary" />
                 <h3 className="mt-4 text-2xl font-bold font-headline">Find Your People</h3>
                 <p className="mt-2 text-foreground/80">
                   Meet like-minded people who actually share your lifestyle.
                 </p>
-              </Link>
+              </div>
               <Link href="/dispensaries" className="flex flex-col items-center text-center">
                 <StoreIcon className="h-10 w-10 text-primary" />
                 <h3 className="mt-4 text-2xl font-bold font-headline">Discover Dispensaries</h3>

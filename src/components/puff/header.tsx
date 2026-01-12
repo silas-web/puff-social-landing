@@ -12,15 +12,7 @@ export function Header() {
         <Cannabis className="h-8 w-8 text-primary" />
         <span className="ml-2 text-xl font-bold font-headline">Puff Social</span>
       </Link>
-      <nav className="ml-auto flex gap-4 sm:gap-6">
-        <Link
-          href="/dispensaries"
-          className="text-sm font-medium hover:underline underline-offset-4"
-          prefetch={false}
-        >
-          Dispensaries
-        </Link>
-      </nav>
+      <nav className="ml-auto flex gap-4 sm:gap-6" />
     </header>
   );
 }

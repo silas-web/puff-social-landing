@@ -9,6 +9,7 @@ import { DispensaryDetails } from "@/components/puff/dispensary-details";
 import { allDispensaries } from "@/lib/dispensary-data";
 import type { Dispensary } from "@/lib/dispensary-data";
 import { Skeleton } from "@/components/ui/skeleton";
+import Link from "next/link";
 
 export default function DispensariesPage() {
   const [isSearching, setIsSearching] = useState(true);
