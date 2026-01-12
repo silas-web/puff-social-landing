@@ -84,6 +84,18 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Stigma Narrative Section */}
+        <section className="w-full border-b py-20 md:py-32">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">
+                Most dating apps make cannabis users hide who they are.
+                <span className="block text-primary">Puff Social was built so you don’t have to.</span>
+              </h2>
+            </div>
+          </div>
+        </section>
+
         {/* Combined Features & Visuals Section */}
         <section className="w-full border-b py-12 md:py-24 bg-muted/40">
             <div className="container mx-auto px-4 md:px-6">
@@ -144,18 +156,6 @@ export default function Home() {
             </div>
         </section>
 
-
-        {/* Stigma Narrative Section */}
-        <section className="w-full border-b py-20 md:py-32">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">
-                Most dating apps make cannabis users hide who they are.
-                <span className="block text-primary">Puff Social was built so you don’t have to.</span>
-              </h2>
-            </div>
-          </div>
-        </section>
 
         {/* Trust & Safety Section */}
         <section className="w-full border-b py-20 md:py-32">
