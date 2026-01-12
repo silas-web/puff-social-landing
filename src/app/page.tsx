@@ -6,8 +6,6 @@ import { Header } from "@/components/puff/header";
 import { Footer } from "@/components/puff/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
-import { StoreIcon, UsersIcon, NewspaperIcon } from "lucide-react";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -86,75 +84,62 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="w-full border-b py-12 md:py-24">
+        {/* Combined Features & Visuals Section */}
+        <section className="w-full border-b py-12 md:py-24 bg-muted/40">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-start">
+                    
                     {/* Feature 1 */}
-                    <div className="flex flex-col items-center">
-                        <div className="inline-block rounded-lg bg-primary/10 p-3 mb-4">
-                            <UsersIcon className="h-8 w-8 text-primary" />
+                    <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-500">
+                        <div className="mb-6">
+                           <Image
+                              src="/IMG_7026-portrait.png"
+                              alt="Puff Social Matches Screen"
+                              width={280}
+                              height={560}
+                              className="rounded-2xl shadow-xl"
+                            />
                         </div>
                         <h3 className="text-2xl font-bold font-headline">Find Your People</h3>
                         <p className="mt-2 text-foreground/80">
                             Meet like-minded people who actually share your lifestyle.
                         </p>
                     </div>
+
                     {/* Feature 2 */}
-                    <div className="flex flex-col items-center">
-                        <div className="inline-block rounded-lg bg-primary/10 p-3 mb-4">
-                            <StoreIcon className="h-8 w-8 text-primary" />
+                    <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-700" style={{ animationDelay: '200ms' }}>
+                        <div className="mb-6">
+                            <Image
+                              src="/IMG_7025-portrait.png"
+                              alt="Puff Social User Profile"
+                              width={280}
+                              height={560}
+                              className="rounded-2xl shadow-xl"
+                            />
                         </div>
                         <h3 className="text-2xl font-bold font-headline">Discover Dispensaries</h3>
                         <p className="mt-2 text-foreground/80">
                             Real reviews and recommendations from the community.
                         </p>
                     </div>
+
                     {/* Feature 3 */}
-                    <div className="flex flex-col items-center">
-                        <div className="inline-block rounded-lg bg-primary/10 p-3 mb-4">
-                            <NewspaperIcon className="h-8 w-8 text-primary" />
+                    <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-900" style={{ animationDelay: '400ms' }}>
+                        <div className="mb-6">
+                             <Image
+                              src="/IMG_7024-left.png"
+                              alt="Puff Social News Feed"
+                              width={280}
+                              height={560}
+                              className="rounded-2xl shadow-xl object-cover"
+                            />
                         </div>
                         <h3 className="text-2xl font-bold font-headline">Stay Connected</h3>
                         <p className="mt-2 text-foreground/80">
                             Cannabis news, culture, and community updates in one place.
                         </p>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        {/* Visual Proof Section */}
-        <section className="w-full border-b py-12 md:py-24 bg-muted/40">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-items-center">
-                    <div className="flex justify-center animate-in fade-in-0 slide-in-from-bottom-10 duration-500">
-                        <Image
-                          src="/IMG_7026-portrait.png"
-                          alt="Puff Social Matches Screen"
-                          width={280}
-                          height={560}
-                          className="rounded-2xl shadow-xl"
-                        />
-                    </div>
-                     <div className="flex justify-center animate-in fade-in-0 slide-in-from-bottom-10 duration-700" style={{ animationDelay: '200ms' }}>
-                        <Image
-                          src="/IMG_7025-portrait.png"
-                          alt="Puff Social User Profile"
-                          width={280}
-                          height={560}
-                          className="rounded-2xl shadow-xl"
-                        />
-                    </div>
-                     <div className="flex justify-center animate-in fade-in-0 slide-in-from-bottom-10 duration-900" style={{ animationDelay: '400ms' }}>
-                        <Image
-                          src="/IMG_7024-left.png"
-                          alt="Puff Social News Feed"
-                          width={280}
-                          height={560}
-                          className="rounded-2xl shadow-xl object-cover"
-                        />
-                    </div>
                 </div>
             </div>
         </section>
