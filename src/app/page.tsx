@@ -128,7 +128,7 @@ export default function Home() {
         </section>
         
         {/* Product Visual Proof Section */}
-        <section className="w-full border-b py-12 md:py-24">
+        <section className="w-full border-b py-12 md:py-24 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 items-center justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     <Image
@@ -136,21 +136,21 @@ export default function Home() {
                       alt="Puff Social Matches Screen"
                       width={280}
                       height={560}
-                      className="rounded-2xl shadow-xl"
+                      className="rounded-2xl shadow-xl animate-in fade-in-0 slide-in-from-bottom-10 duration-700"
                     />
                     <Image
                       src="/IMG_7025-portrait.png"
                       alt="Puff Social User Profile"
                       width={280}
                       height={560}
-                      className="rounded-2xl shadow-xl"
+                      className="rounded-2xl shadow-xl animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-200"
                     />
                     <Image
                       src="/IMG_7024-left.png"
                       alt="Puff Social News Feed"
                       width={280}
                       height={560}
-                      className="rounded-2xl shadow-xl object-cover"
+                      className="rounded-2xl shadow-xl object-cover animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-400"
                     />
                 </div>
             </div>
