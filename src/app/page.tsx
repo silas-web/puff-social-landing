@@ -6,6 +6,7 @@ import { Header } from "@/components/puff/header";
 import { Footer } from "@/components/puff/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -84,7 +85,7 @@ export default function Home() {
           </div>
         </section>
         
-        {/* Stigma Narrative Section */}
+        {/* Stigma and Trust Section */}
         <section className="w-full border-b py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="mx-auto max-w-3xl text-center">
@@ -92,6 +93,28 @@ export default function Home() {
                 Most dating apps make cannabis users hide who they are.
                 <span className="block text-primary">Puff Social was built so you don’t have to.</span>
               </h2>
+            </div>
+            
+            <Separator className="my-12 max-w-sm mx-auto" />
+
+            <div className="space-y-4 text-center">
+              <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
+                A community you can trust.
+              </h3>
+              <ul className="mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-lg">
+                <li className="flex items-center gap-2">
+                  <span className="font-semibold text-primary">21+</span>
+                  <span>Community</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="font-semibold text-primary">Privacy-first</span>
+                  <span>Profiles</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="font-semibold text-primary">Inclusive</span>
+                  <span>& Judgment-Free</span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -103,7 +126,7 @@ export default function Home() {
                     
                     {/* Feature 1 */}
                     <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-500">
-                        <div className="mb-6 h-[560px] flex items-center">
+                        <div className="mb-6 flex h-[560px] items-center">
                            <Image
                               src="/IMG_7026-portrait.png"
                               alt="Puff Social Matches Screen"
@@ -120,7 +143,7 @@ export default function Home() {
 
                     {/* Feature 2 */}
                     <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-700" style={{ animationDelay: '200ms' }}>
-                        <div className="mb-6 h-[560px] flex items-center">
+                        <div className="mb-6 flex h-[560px] items-center">
                             <Image
                               src="/IMG_7025-portrait.png"
                               alt="Puff Social User Profile"
@@ -137,7 +160,7 @@ export default function Home() {
 
                     {/* Feature 3 */}
                     <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-900" style={{ animationDelay: '400ms' }}>
-                        <div className="mb-6 h-[560px] flex items-center">
+                        <div className="mb-6 flex h-[560px] items-center">
                              <Image
                               src="/IMG_7024-left.png"
                               alt="Puff Social News Feed"
@@ -154,32 +177,6 @@ export default function Home() {
 
                 </div>
             </div>
-        </section>
-
-
-        {/* Trust & Safety Section */}
-        <section className="w-full border-b py-20 md:py-32">
-          <div className="container mx-auto grid max-w-5xl items-center justify-center gap-4 px-4 text-center md:gap-8 md:px-6">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-                A community you can trust.
-              </h2>
-              <ul className="mx-auto max-w-xl space-y-4">
-                <li className="flex items-center justify-center gap-2 text-lg">
-                  <span className="font-semibold text-primary">21+</span>
-                  <span>Community</span>
-                </li>
-                <li className="flex items-center justify-center gap-2 text-lg">
-                  <span className="font-semibold text-primary">Privacy-first</span>
-                  <span>Profiles</span>
-                </li>
-                <li className="flex items-center justify-center gap-2 text-lg">
-                  <span className="font-semibold text-primary">Inclusive</span>
-                  <span>& Judgment-Free</span>
-                </li>
-              </ul>
-            </div>
-          </div>
         </section>
 
         {/* Final CTA Section */}
