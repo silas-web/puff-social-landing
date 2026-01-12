@@ -83,7 +83,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        
         {/* Stigma Narrative Section */}
         <section className="w-full border-b py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-6">
@@ -103,7 +103,7 @@ export default function Home() {
                     
                     {/* Feature 1 */}
                     <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-500">
-                        <div className="mb-6">
+                        <div className="mb-6 h-[560px] flex items-center">
                            <Image
                               src="/IMG_7026-portrait.png"
                               alt="Puff Social Matches Screen"
@@ -120,7 +120,7 @@ export default function Home() {
 
                     {/* Feature 2 */}
                     <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-700" style={{ animationDelay: '200ms' }}>
-                        <div className="mb-6">
+                        <div className="mb-6 h-[560px] flex items-center">
                             <Image
                               src="/IMG_7025-portrait.png"
                               alt="Puff Social User Profile"
@@ -137,13 +137,13 @@ export default function Home() {
 
                     {/* Feature 3 */}
                     <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-900" style={{ animationDelay: '400ms' }}>
-                        <div className="mb-6">
+                        <div className="mb-6 h-[560px] flex items-center">
                              <Image
                               src="/IMG_7024-left.png"
                               alt="Puff Social News Feed"
                               width={280}
                               height={560}
-                              className="rounded-2xl shadow-xl object-cover"
+                              className="rounded-2xl shadow-xl object-cover object-left"
                             />
                         </div>
                         <h3 className="text-2xl font-bold font-headline">Stay Connected</h3>
