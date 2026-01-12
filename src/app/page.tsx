@@ -6,7 +6,7 @@ import { Header } from "@/components/puff/header";
 import { Footer } from "@/components/puff/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
+import { ShieldCheck } from "lucide-react";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -88,37 +88,40 @@ export default function Home() {
         {/* Stigma and Trust Section */}
         <section className="w-full border-b py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">
-                Most dating apps make cannabis users hide who they are.
-                <span className="block text-primary">Puff Social was built so you don’t have to.</span>
-              </h2>
-            </div>
-            
-            <Separator className="my-12 max-w-sm mx-auto" />
+            <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
+              <div className="flex flex-col items-start text-left">
+                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">
+                    Most dating apps make cannabis users hide who they are.
+                    <span className="block text-primary">Puff Social was built so you don’t have to.</span>
+                </h2>
+              </div>
 
-            <div className="space-y-4 text-center">
-              <h3 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
-                A community you can trust.
-              </h3>
-              <ul className="mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-lg">
-                <li className="flex items-center gap-2">
-                  <span className="font-semibold text-primary">21+</span>
-                  <span>Community</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="font-semibold text-primary">Privacy-first</span>
-                  <span>Profiles</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="font-semibold text-primary">Inclusive</span>
-                  <span>& Judgment-Free</span>
-                </li>
-              </ul>
+              <div className="flex flex-col items-start gap-6 rounded-lg bg-muted/40 p-8">
+                <div className="flex items-center gap-4">
+                  <ShieldCheck className="h-8 w-8 text-primary" />
+                  <h3 className="text-2xl font-bold font-headline">
+                    A community you can trust.
+                  </h3>
+                </div>
+                <ul className="grid grid-cols-2 gap-x-8 gap-y-4 text-lg sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+                  <li className="flex flex-col items-start">
+                    <span className="font-semibold text-primary">21+</span>
+                    <span className="text-muted-foreground">Community</span>
+                  </li>
+                  <li className="flex flex-col items-start">
+                    <span className="font-semibold text-primary">Privacy-first</span>
+                    <span className="text-muted-foreground">Profiles</span>
+                  </li>
+                  <li className="flex flex-col items-start">
+                    <span className="font-semibold text-primary">Inclusive</span>
+                    <span className="text-muted-foreground">& Judgment-Free</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
-
+        
         {/* Combined Features & Visuals Section */}
         <section className="w-full border-b py-12 md:py-24 bg-muted/40">
             <div className="container mx-auto px-4 md:px-6">
@@ -126,51 +129,51 @@ export default function Home() {
                     
                     {/* Feature 1 */}
                     <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-500">
-                        <div className="mb-6 flex h-[560px] items-center">
+                        <div className="mb-6 flex h-[480px] items-center">
                            <Image
                               src="/IMG_7026-portrait.png"
                               alt="Puff Social Matches Screen"
-                              width={280}
-                              height={560}
+                              width={240}
+                              height={480}
                               className="rounded-2xl shadow-xl"
                             />
                         </div>
                         <h3 className="text-2xl font-bold font-headline">Find Your People</h3>
-                        <p className="mt-2 text-foreground/80">
+                        <p className="mt-2 text-foreground/80 max-w-xs">
                             Meet like-minded people who actually share your lifestyle.
                         </p>
                     </div>
 
                     {/* Feature 2 */}
                     <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-700" style={{ animationDelay: '200ms' }}>
-                        <div className="mb-6 flex h-[560px] items-center">
+                        <div className="mb-6 flex h-[480px] items-center">
                             <Image
                               src="/IMG_7025-portrait.png"
                               alt="Puff Social User Profile"
-                              width={280}
-                              height={560}
+                              width={240}
+                              height={480}
                               className="rounded-2xl shadow-xl"
                             />
                         </div>
                         <h3 className="text-2xl font-bold font-headline">Discover Dispensaries</h3>
-                        <p className="mt-2 text-foreground/80">
+                        <p className="mt-2 text-foreground/80 max-w-xs">
                             Real reviews and recommendations from the community.
                         </p>
                     </div>
 
                     {/* Feature 3 */}
                     <div className="flex flex-col items-center animate-in fade-in-0 slide-in-from-bottom-10 duration-900" style={{ animationDelay: '400ms' }}>
-                        <div className="mb-6 flex h-[560px] items-center">
+                        <div className="mb-6 flex h-[480px] items-center">
                              <Image
                               src="/IMG_7024-left.png"
                               alt="Puff Social News Feed"
-                              width={280}
-                              height={560}
+                              width={240}
+                              height={480}
                               className="rounded-2xl shadow-xl object-cover object-left"
                             />
                         </div>
                         <h3 className="text-2xl font-bold font-headline">Stay Connected</h3>
-                        <p className="mt-2 text-foreground/80">
+                        <p className="mt-2 text-foreground/80 max-w-xs">
                             Cannabis news, culture, and community updates in one place.
                         </p>
                     </div>
