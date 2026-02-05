@@ -58,11 +58,11 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full border-b py-20 md:py-32 lg:py-40">
+        <section className="w-full border-b py-20 md:py-32 lg:py-40 bg-gradient-to-b from-puff-green-light to-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
               <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl font-headline">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl font-headline bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Where cannabis culture meets real connection.
                 </h1>
                 <p className="mt-4 max-w-[600px] text-foreground/80 md:text-xl">
@@ -86,7 +86,7 @@ export default function Home() {
         </section>
         
         {/* Stigma and Trust Section */}
-        <section className="w-full border-b py-20 md:py-32">
+        <section className="w-full border-b bg-puff-green-light py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
               <div className="flex flex-col items-start text-left">
@@ -96,7 +96,7 @@ export default function Home() {
                 </h2>
               </div>
 
-              <div className="flex flex-col items-start gap-6 rounded-lg bg-muted/40 p-8">
+              <div className="flex flex-col items-start gap-6 rounded-lg bg-background/50 p-8">
                 <div className="flex items-center gap-4">
                   <ShieldCheck className="h-8 w-8 text-primary" />
                   <h3 className="text-2xl font-bold font-headline">
@@ -123,7 +123,7 @@ export default function Home() {
         </section>
         
         {/* Combined Features & Visuals Section */}
-        <section className="w-full border-b py-12 md:py-24 bg-muted/40">
+        <section className="w-full border-b py-12 md:py-24">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-start">
                     
@@ -183,7 +183,7 @@ export default function Home() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="w-full py-20 md:py-24 lg:py-32">
+        <section className="w-full bg-puff-green-light py-20 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
               Join the waitlist and be the first to know.

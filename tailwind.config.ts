@@ -14,6 +14,7 @@ export default {
         headline: ['"PT Sans"', 'sans-serif'],
       },
       colors: {
+        'puff-green-light': '#E8F5E9',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
