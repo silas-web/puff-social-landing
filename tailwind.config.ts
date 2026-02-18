@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"PT Sans"', 'sans-serif'],
-        headline: ['"PT Sans"', 'sans-serif'],
+        sans: ['"Poppins"', 'sans-serif'],
+        headline: ['"Poppins"', 'sans-serif'],
       },
       colors: {
         'puff-green-light': '#E8F5E9',
