@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Cannabis } from "lucide-react";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -9,8 +9,14 @@ export function Header() {
         className="flex items-center justify-center"
         prefetch={false}
       >
-        <Cannabis className="h-8 w-8 text-primary" />
-        <span className="ml-2 text-xl font-bold font-headline">Puff Social</span>
+        <Image
+          src="/Puff_Social_Full Color_Shadow.svg"
+          alt="Puff Social"
+          width={140}
+          height={40}
+          className="h-10 w-auto"
+          priority
+        />
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6" />
     </header>
