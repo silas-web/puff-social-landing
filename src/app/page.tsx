@@ -57,43 +57,6 @@ export default function Home() {
     }
   };
 
-  const WaitlistForm = () => {
-    if (isSignedUp) {
-      return (
-        <div className="flex justify-center">
-          <p className="text-center text-lg font-medium text-primary">
-            You're on the list. We'll be in touch soon. ✅
-          </p>
-        </div>
-      );
-    }
-    return (
-      <form
-        onSubmit={handleSignUp}
-        className="flex w-full max-w-md items-center space-x-2"
-      >
-        <Input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={handleEmailChange}
-          required
-          disabled={isLoading}
-          className="flex-1"
-        />
-        <Button type="submit" disabled={isLoading}>
-          {isLoading ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Joining...
-            </>
-          ) : (
-            "Join the Waitlist"
-          )}
-        </Button>
-      </form>
-    );
-  };
 
   const PhoneMockup = ({
     src,
@@ -149,7 +112,38 @@ export default function Home() {
                   community—designed for connection, discovery, and culture.
                 </p>
                 <div className="mt-8 w-full max-w-md">
-                  <WaitlistForm />
+                  {isSignedUp ? (
+                    <div className="flex justify-center">
+                      <p className="text-center text-lg font-medium text-primary">
+                        You're on the list. We'll be in touch soon. ✅
+                      </p>
+                    </div>
+                  ) : (
+                    <form
+                      onSubmit={handleSignUp}
+                      className="flex w-full max-w-md items-center space-x-2"
+                    >
+                      <Input
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={handleEmailChange}
+                        required
+                        disabled={isLoading}
+                        className="flex-1"
+                      />
+                      <Button type="submit" disabled={isLoading}>
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Joining...
+                          </>
+                        ) : (
+                          "Join the Waitlist"
+                        )}
+                      </Button>
+                    </form>
+                  )}
                 </div>
               </div>
               <div className="flex justify-center">
@@ -260,7 +254,38 @@ export default function Home() {
               Get early access to Puff Social and help shape the future of cannabis connection.
             </p>
             <div className="mx-auto mt-8 max-w-md">
-              <WaitlistForm />
+                  {isSignedUp ? (
+                    <div className="flex justify-center">
+                      <p className="text-center text-lg font-medium text-primary">
+                        You're on the list. We'll be in touch soon. ✅
+                      </p>
+                    </div>
+                  ) : (
+                    <form
+                      onSubmit={handleSignUp}
+                      className="flex w-full max-w-md items-center space-x-2"
+                    >
+                      <Input
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={handleEmailChange}
+                        required
+                        disabled={isLoading}
+                        className="flex-1"
+                      />
+                      <Button type="submit" disabled={isLoading}>
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Joining...
+                          </>
+                        ) : (
+                          "Join the Waitlist"
+                        )}
+                      </Button>
+                    </form>
+                  )}
             </div>
 
             {/* QR Code */}
