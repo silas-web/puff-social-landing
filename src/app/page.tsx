@@ -162,7 +162,7 @@ export default function Home() {
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-24">
               <div className="flex flex-col items-start text-left">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">
-                  Most dating apps make cannabis users hide who they are.
+                  Most social apps make cannabis users hide who they are.
                   <span className="block text-primary">Puff Social was built so you don't have to.</span>
                 </h2>
               </div>
@@ -186,6 +186,14 @@ export default function Home() {
                   <li className="flex flex-col items-start">
                     <span className="font-semibold text-primary">Inclusive</span>
                     <span className="text-muted-foreground">& Judgment-Free</span>
+                  </li>
+                  <li className="flex flex-col items-start">
+                    <span className="font-semibold text-primary">Curated</span>
+                    <span className="text-muted-foreground">Cannabis Social Events</span>
+                  </li>
+                  <li className="flex flex-col items-start">
+                    <span className="font-semibold text-primary">Advanced</span>
+                    <span className="text-muted-foreground">User Safety System</span>
                   </li>
                 </ul>
               </div>
