@@ -18,7 +18,15 @@ export function Header() {
           priority
         />
       </Link>
-      <nav className="ml-auto flex gap-4 sm:gap-6" />
+      <nav className="ml-auto flex gap-4 sm:gap-6">
+        <Link
+          href="/about"
+          className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+          prefetch={false}
+        >
+          About
+        </Link>
+      </nav>
     </header>
   );
 }

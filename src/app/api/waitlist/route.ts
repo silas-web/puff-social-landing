@@ -106,7 +106,7 @@ export async function POST(request: NextRequest) {
 
 
               <p style="font-size: 15px; margin: 24px 0 0; color: #444;">
-                Stay lifted,<br>
+                Puff Socially,<br>
                 <strong style="color: #2E7D32;">The Puff Social Team</strong> 🌿
               </p>
             </div>
