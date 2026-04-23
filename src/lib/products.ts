@@ -34,9 +34,9 @@ export const products: Product[] = [
     colorBg: "bg-blue-50",
     sizes: ["S", "M", "L", "XL", "2XL"],
     images: {
-      mockup: "/merch/blue-dream-mockup.png",
-      front: "/merch/blue-dream-front.png",
-      detail: "/merch/blue-dream-detail.png",
+      mockup: "/merch/blue-dream-mockup.webp",
+      front: "/merch/blue-dream-front.webp",
+      detail: "/merch/blue-dream-detail.webp",
     },
   },
   {
@@ -54,9 +54,9 @@ export const products: Product[] = [
     colorBg: "bg-green-50",
     sizes: ["S", "M", "L", "XL", "2XL"],
     images: {
-      mockup: "/merch/og-kush-mockup.png",
-      front: "/merch/og-kush-front.png",
-      detail: "/merch/og-kush-detail.png",
+      mockup: "/merch/og-kush-mockup.webp",
+      front: "/merch/og-kush-front.webp",
+      detail: "/merch/og-kush-detail.webp",
     },
   },
   {
@@ -74,9 +74,9 @@ export const products: Product[] = [
     colorBg: "bg-amber-50",
     sizes: ["S", "M", "L", "XL", "2XL"],
     images: {
-      mockup: "/merch/lemon-cake-mockup.png",
-      front: "/merch/lemon-cake-front.png",
-      detail: "/merch/lemon-cake-detail.png",
+      mockup: "/merch/lemon-cake-mockup.webp",
+      front: "/merch/lemon-cake-front.webp",
+      detail: "/merch/lemon-cake-detail.webp",
     },
   },
   {
@@ -94,9 +94,9 @@ export const products: Product[] = [
     colorBg: "bg-purple-50",
     sizes: ["S", "M", "L", "XL", "2XL"],
     images: {
-      mockup: "/merch/purple-haze-mockup.png",
-      front: "/merch/purple-haze-front.png",
-      detail: "/merch/purple-haze-detail.png",
+      mockup: "/merch/purple-haze-mockup.webp",
+      front: "/merch/purple-haze-front.webp",
+      detail: "/merch/purple-haze-detail.webp",
     },
   },
 ];
