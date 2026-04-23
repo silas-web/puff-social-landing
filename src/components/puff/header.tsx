@@ -29,6 +29,13 @@ export function Header() {
           Shop
         </Link>
         <Link
+          href="/media"
+          className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+          prefetch={false}
+        >
+          Media
+        </Link>
+        <Link
           href="/about"
           className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           prefetch={false}
