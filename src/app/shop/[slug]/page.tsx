@@ -22,6 +22,8 @@ export default function ProductDetailPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [notifyEmail, setNotifyEmail] = useState("");
   const [isNotified, setIsNotified] = useState(false);
+  const [notifyLoading, setNotifyLoading] = useState(false);
+  const [notifyMessage, setNotifyMessage] = useState("");
 
   if (!product) {
     notFound();
@@ -61,10 +63,28 @@ export default function ProductDetailPage() {
     }
   };
 
-  const handleNotify = (e: React.FormEvent) => {
+  const handleNotify = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (notifyEmail) {
+    if (!notifyEmail || notifyLoading) return;
+
+    setNotifyLoading(true);
+    try {
+      const res = await fetch("/api/merch-notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: notifyEmail,
+          productId: product.id,
+        }),
+      });
+
+      const data = await res.json();
+      setNotifyMessage(data.message || "You're on the list!");
       setIsNotified(true);
+    } catch (err) {
+      setNotifyMessage("Something went wrong. Please try again.");
+    } finally {
+      setNotifyLoading(false);
     }
   };
 
@@ -188,7 +208,7 @@ export default function ProductDetailPage() {
                     <div className="flex items-center gap-3 text-primary">
                       <Check className="h-5 w-5" />
                       <span className="font-semibold">
-                        We'll notify you when this drops! 🔥
+                        {notifyMessage || "We'll notify you when this drops! 🔥"}
                       </span>
                     </div>
                   ) : (
@@ -199,6 +219,9 @@ export default function ProductDetailPage() {
                       <p className="text-sm text-muted-foreground mb-4">
                         Be the first to know when this tee is available.
                       </p>
+                      {notifyMessage && !isNotified && (
+                        <p className="text-sm text-red-500 mb-3">{notifyMessage}</p>
+                      )}
                       <form
                         onSubmit={handleNotify}
                         className="flex gap-2"
@@ -209,11 +232,16 @@ export default function ProductDetailPage() {
                           value={notifyEmail}
                           onChange={(e) => setNotifyEmail(e.target.value)}
                           required
+                          disabled={notifyLoading}
                           className="flex-1"
                         />
-                        <Button type="submit" variant="default">
-                          <Bell className="mr-2 h-4 w-4" />
-                          Notify Me
+                        <Button type="submit" variant="default" disabled={notifyLoading}>
+                          {notifyLoading ? (
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                          ) : (
+                            <Bell className="mr-2 h-4 w-4" />
+                          )}
+                          {notifyLoading ? "Saving..." : "Notify Me"}
                         </Button>
                       </form>
                     </>
