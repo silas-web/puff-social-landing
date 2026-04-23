@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ShoppingBag } from "lucide-react";
 
 export function Header() {
   return (
@@ -19,6 +20,14 @@ export function Header() {
         />
       </Link>
       <nav className="ml-auto flex gap-4 sm:gap-6">
+        <Link
+          href="/shop"
+          className="flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+          prefetch={false}
+        >
+          <ShoppingBag className="h-4 w-4" />
+          Shop
+        </Link>
         <Link
           href="/about"
           className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors"

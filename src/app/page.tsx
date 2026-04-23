@@ -2,12 +2,15 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Header } from "@/components/puff/header";
 import { Footer } from "@/components/puff/footer";
+import { ProductCard } from "@/components/puff/product-card";
+import { products } from "@/lib/products";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
-import { ShieldCheck, Loader2 } from "lucide-react";
+import { ShieldCheck, Loader2, ArrowRight } from "lucide-react";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -248,6 +251,41 @@ export default function Home() {
                 </p>
               </div>
 
+            </div>
+          </div>
+        </section>
+
+        {/* Strain Tees Merch Section */}
+        <section className="w-full border-b py-20 md:py-28 bg-gradient-to-b from-background to-puff-green-light/30">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-12">
+              <span className="inline-block text-xs uppercase tracking-[0.25em] font-semibold text-primary mb-3 px-4 py-1.5 rounded-full bg-primary/10">
+                New Drop
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tighter font-headline">
+                Rep Your{" "}
+                <span className="bg-gradient-to-r from-green-500 via-purple-500 to-amber-500 bg-clip-text text-transparent">
+                  Strain
+                </span>
+              </h2>
+              <p className="mt-3 text-foreground/70 max-w-lg mx-auto">
+                Premium cannabis culture apparel — each tee inspired by your
+                favorite strains. Limited drop.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <Link
+                href="/shop"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300 text-lg"
+              >
+                View All Merch
+                <ArrowRight className="h-5 w-5" />
+              </Link>
             </div>
           </div>
         </section>
